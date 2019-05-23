@@ -1,0 +1,14 @@
+.calculatorContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.Calculator {
+    margin-top:120px; 
+    width:600px;
+    height:600px;
+    background-color: #6BB2E5; 
+    /* display: flex;  */
+    border-radius: 20px;
+}
+
