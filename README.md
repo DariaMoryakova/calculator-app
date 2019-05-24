@@ -6,7 +6,7 @@
 
 Calculator app performes basic functions of a calcular such as addition, substraction, multiplication, division, mod and exp. 
 
-## How to user the app: 
+## How to use the app: 
 1. Enter your first number input userInput fuild (userInput1 component) 
 2. Enter second number input second userInput fuild (userInput2 component) 
 3. Select operation you want to perform on two numbers (one of Operation components) 
