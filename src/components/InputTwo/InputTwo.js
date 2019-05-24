@@ -1,11 +1,13 @@
 import React from 'react';
 import './InputTwo.css'; 
 
-const InputTwo = () =>{
+const InputTwo = (props) =>{
     return(
-        <div className="InputTwo">
-            <p> Two </p> 
+        <div className="form-group" id="calculator-form" method="GET" > 
+                <label >  </label>
+                <input className="InputOne" placeholder="Type second number"/>
         </div>
+    
     )
 } 
 

@@ -1,0 +1,12 @@
+.ComputeButton {
+    width:200px;
+    height:80px;
+    margin-left:50px;
+    margin-top:15px;
+    background-color:#F9EEE0; 
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    font-size:25px;
+}
+

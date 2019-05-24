@@ -1,0 +1,37 @@
+.Operation {
+    background-color:#F9EEE0; 
+    border-radius: 5px;
+    margin-top:20px;
+    margin-left:40px;
+    width:100px;
+    /* height: 120px; */
+    font-size:60px;
+    text-align: center;  
+}
+.height1 {
+    height: 120px;
+}
+.height2 {
+    height:80px;
+}
+.operationText {
+    margin-top:-40px;
+}
+.addition {
+    color:red; 
+}
+.division {
+    color:blue;
+}
+.multiplication {
+    color:green;
+}
+.substruct {
+    color:purple;
+}
+.exp {
+    color:orange;
+}
+.mod {
+    color:brown;
+}

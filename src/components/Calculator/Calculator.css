@@ -1,14 +1,27 @@
 .calculatorContainer {
     display: flex;
-    align-items: center;
-    justify-content: center
+    align-items: center; 
+    justify-content: center; 
 }
 .Calculator {
     margin-top:120px; 
     width:600px;
     height:600px;
     background-color: #6BB2E5; 
-    /* display: flex;  */
     border-radius: 20px;
+    display: flex; 
+    flex-wrap: wrap;
 }
-
+.operationsContainer {
+    display:flex;
+    flex-wrap:wrap; 
+    flex-direction: column; 
+    justify-content: flex-start;
+}
+.lastTwo {
+    height:80px;
+}
+.OperationSize {
+    width:100px;
+    height:120px;
+}

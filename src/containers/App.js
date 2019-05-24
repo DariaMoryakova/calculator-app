@@ -5,15 +5,24 @@ import Result from '../components/Result/Result';
 
 class App extends Component {
   constructor() {
-    super() 
+    super();
+    this.addition = this.addition.bind(this);
     this.state = {
-        userInput1: 'one',
-        userInput2:"two",
-        result:"result"
+        userInput1: 'testOne',
+        userInput2:"testTwo",
+        result:"TestThree"
       }
 }
-  render() {
 
+addition = () => {
+  this.setState({
+          result: "addition test"
+      })
+      console.log("working! working!")
+}
+
+  render() {
+    
   return (
     <div className="App">
       <Calculator> </Calculator>

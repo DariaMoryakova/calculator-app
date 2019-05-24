@@ -1,11 +1,11 @@
 import React from 'react';
 import './Result.css';
 
-const Result = () => {
+const Result = (props) => {
     return (
         <div  className="resultContainer"> 
             <div className="Result">
-                {/* <p>  Hello </p> */}
+                <p> {props.test1} </p>
             </div>
         </div> 
     )
