@@ -1,4 +1,4 @@
-#### Calculator-app 
+# Calculator-app 
 
 ## Technology: React,Javascript
 
@@ -13,11 +13,11 @@ Calculator app performes basic functions of a calcular such as addition, substra
 4. CLick Campute button at the bottom (CamputeButton component) 
 5. See output displayed on the top at the "Result" display (Result component) 
 
-## Planning to do:
+### Planning to do:
 
 Planning to connect to Node.js backend and Apigee proxy to test multiple functions of calculator from different proxies connected into one 
 
-## not finish part: 
+### not finish part: 
 
 Need to add functionality of display to grab data from InputOne and InputTwo to perform calculation 
 Need to manage state to change userInput and Result in order to print final output 
