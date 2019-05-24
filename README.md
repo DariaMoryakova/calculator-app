@@ -1,6 +1,6 @@
-###Calculator-app 
+#### Calculator-app 
 
-##Technology: React,Javascript
+## Technology: React,Javascript
 
 ## Functionality:
 
