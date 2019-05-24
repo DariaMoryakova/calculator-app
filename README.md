@@ -1,3 +1,30 @@
+###Calculator-app 
+
+##Technology: React,Javascript
+
+## Functionality:
+
+Calculator app performes basic functions of a calcular such as addition, substraction, multiplication, division, mod and exp. 
+
+## How to user the app: 
+1. Enter your first number input userInput fuild (userInput1 component) 
+2. Enter second number input second userInput fuild (userInput2 component) 
+3. Select operation you want to perform on two numbers (one of Operation components) 
+4. CLick Campute button at the bottom (CamputeButton component) 
+5. See output displayed on the top at the "Result" display (Result component) 
+
+## Planning to do:
+
+Planning to connect to Node.js backend and Apigee proxy to test multiple functions of calculator from different proxies connected into one 
+
+## not finish part: 
+
+Need to add functionality of display to grab data from InputOne and InputTwo to perform calculation 
+Need to manage state to change userInput and Result in order to print final output 
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
