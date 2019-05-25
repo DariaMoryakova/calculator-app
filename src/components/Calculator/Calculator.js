@@ -2,8 +2,7 @@
 import React from "react";
 import "./Calculator.css";
 import Result from "../Result/Result";
-import InputOne from "../InputOne/InputOne";
-import InputTwo from "../InputTwo/InputTwo";
+import Input from "../InputOne/InputOne";
 import ComputeButton from "../ComputeButton/ComputeButton";
 import Operation from "../Operation/Operation";
 import api from "../../utils/api";
@@ -11,23 +10,9 @@ import api from "../../utils/api";
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      userInput1: "testOne",
-      userInput2: "testTwo",
-      result: "TestThree",
-      operation: "addition"
-    };
     this.handleInputOne = this.handleInputOne.bind(this);
     this.handleInputTwo = this.handleInputTwo.bind(this);
   }
-
-  //   addition() {
-  //     this.setState({
-  //       operation: "addition"
-  //     });
-  //     console.log("addition! working!");
-  //     console.log(this.state.userInput1);
-  //   }
 
   handleOperator = x => {
     this.setState({ operation: x });
@@ -54,12 +39,9 @@ class Calculator extends React.Component {
 
           <div className="first">
             {/* First user input: */}
-            <InputOne
-              value={this.state.userInput1}
-              onChange={this.handleInputOne}
-            />
+            <Input onChange={this.handleInputOne} />
             {/* Second user input: */}
-            <InputTwo />
+            <Input onChange={this.handleInputTwo} />
             {/* ComputeButton is basically submit button: */}
             <ComputeButton />
           </div>
