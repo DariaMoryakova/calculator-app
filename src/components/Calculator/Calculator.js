@@ -21,13 +21,13 @@ class Calculator extends React.Component {
 
   handleInputOne = e => {
     this.setState({
-      userInput1: e.target.value
+      x: e.target.value
     });
   };
 
   handleInputTwo = e => {
     this.setState({
-      userInput2: e.target.value
+      y: e.target.value
     });
   };
 
