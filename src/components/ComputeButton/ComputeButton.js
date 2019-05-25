@@ -1,6 +1,5 @@
 import React from "react";
 import "./ComputeButton.css";
-import { tsPropertySignature } from "@babel/types";
 
 //Last button for user to press to submit for calculator to perform mathematical camputation on numbers:
 const ComputeButton = props => {

@@ -10,6 +10,7 @@ import api from "../../utils/api";
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { result: "" };
     this.handleInputOne = this.handleInputOne.bind(this);
     this.handleInputTwo = this.handleInputTwo.bind(this);
     this.handleOperator = this.handleOperator.bind(this);
@@ -32,9 +33,14 @@ class Calculator extends React.Component {
   };
 
   handleApiCall = (operator, x, y) => {
-    api.callProxy(operator, x, y).then(res => {
-      console.log(res);
-    });
+    api
+      .callProxy(operator, x, y)
+      .then(res => {
+        this.setState({ result: res.data });
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   render() {
@@ -42,7 +48,7 @@ class Calculator extends React.Component {
       <div className="calculatorContainer">
         <div className="Calculator">
           {/* Result will display result of calculation performed by calculator: */}
-          <Result test1="test"> </Result>
+          <Result value={this.state.result}> </Result>
 
           <div className="first">
             {/* First user input: */}
@@ -72,7 +78,7 @@ class Calculator extends React.Component {
             <Operation
               choice="Operation multiplication height2"
               operation="*"
-              route="multiplication placeholder"
+              route="mult"
               click={this.handleOperator}
             />
           </div>
