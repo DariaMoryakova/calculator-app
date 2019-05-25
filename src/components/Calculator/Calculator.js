@@ -12,23 +12,30 @@ class Calculator extends React.Component {
     super(props);
     this.handleInputOne = this.handleInputOne.bind(this);
     this.handleInputTwo = this.handleInputTwo.bind(this);
+    this.handleOperator = this.handleOperator.bind(this);
   }
 
   handleOperator = x => {
     this.setState({ operation: x });
   };
 
-  handleInputOne(e) {
+  handleInputOne = e => {
     this.setState({
       userInput1: e.target.value
     });
-  }
+  };
 
-  handleInputTwo(e) {
+  handleInputTwo = e => {
     this.setState({
       userInput2: e.target.value
     });
-  }
+  };
+
+  handleApiCall = (operator, x, y) => {
+    api.callProxy(operator, x, y).then(res => {
+      console.log(res);
+    });
+  };
 
   render() {
     return (
@@ -43,41 +50,50 @@ class Calculator extends React.Component {
             {/* Second user input: */}
             <Input onChange={this.handleInputTwo} />
             {/* ComputeButton is basically submit button: */}
-            <ComputeButton />
+            <ComputeButton
+              status={this.state}
+              handleClick={this.handleApiCall}
+            />
           </div>
 
           <div className="operationsContainer">
             <Operation
-              click={() => this.addition()}
               choice="Operation addition height1"
               operation="+"
+              route="addition placeholder"
+              click={this.handleOperator}
             />
             <Operation
-              click={() => this.substruct()}
               choice="Operation substruct height1"
               operation="-"
+              route="diff"
+              click={this.handleOperator}
             />
             <Operation
-              click={() => this.multiplication()}
               choice="Operation multiplication height2"
               operation="*"
+              route="multiplication placeholder"
+              click={this.handleOperator}
             />
           </div>
           <div className="operationsContainer">
             <Operation
-              click={() => this.mod()}
               choice="Operation mod height1"
               operation="%"
+              route="mod placeholder"
+              click={this.handleOperator}
             />
             <Operation
-              click={() => this.exp()}
               choice="Operation division height1"
               operation="/"
+              route="div"
+              click={this.handleOperator}
             />
             <Operation
-              click={() => this.exp()}
               choice="Operation exp height2"
               operation="^"
+              route="exp"
+              click={this.handleOperator}
             />
           </div>
         </div>
