@@ -6,6 +6,7 @@ import Input from "../InputOne/InputOne";
 import ComputeButton from "../ComputeButton/ComputeButton";
 import Operation from "../Operation/Operation";
 import api from "../../utils/api";
+import ops from "../../operations.json";
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -15,6 +16,21 @@ class Calculator extends React.Component {
     this.handleInputTwo = this.handleInputTwo.bind(this);
     this.handleOperator = this.handleOperator.bind(this);
   }
+  ops1 = ops.slice(0, 3);
+  ops2 = ops.slice(3);
+
+  handleMap = x => {
+    return (
+      <Operation
+        choice={x.choice}
+        operation={x.operation}
+        route={x.route}
+        click={this.handleOperator}
+        selected={this.state.operation}
+        key={x.operation}
+      />
+    );
+  };
 
   handleOperator = x => {
     this.setState({ operation: x });
@@ -48,13 +64,12 @@ class Calculator extends React.Component {
       <div className="calculatorContainer">
         <div className="Calculator">
           {/* Result will display result of calculation performed by calculator: */}
-          <Result value={this.state.result}> </Result>
-
+          <Result value={this.state.result} />
           <div className="first">
             {/* First user input: */}
-            <Input onChange={this.handleInputOne} />
+            <Input onChange={this.handleInputOne} placeholder="First Value" />
             {/* Second user input: */}
-            <Input onChange={this.handleInputTwo} />
+            <Input onChange={this.handleInputTwo} placeholder="Second Value" />
             {/* ComputeButton is basically submit button: */}
             <ComputeButton
               status={this.state}
@@ -63,44 +78,10 @@ class Calculator extends React.Component {
           </div>
 
           <div className="operationsContainer">
-            <Operation
-              choice="Operation addition height1"
-              operation="+"
-              route="addition placeholder"
-              click={this.handleOperator}
-            />
-            <Operation
-              choice="Operation substruct height1"
-              operation="-"
-              route="diff"
-              click={this.handleOperator}
-            />
-            <Operation
-              choice="Operation multiplication height2"
-              operation="*"
-              route="mult"
-              click={this.handleOperator}
-            />
+            {this.ops1.map(this.handleMap)}
           </div>
           <div className="operationsContainer">
-            <Operation
-              choice="Operation mod height1"
-              operation="%"
-              route="mod placeholder"
-              click={this.handleOperator}
-            />
-            <Operation
-              choice="Operation division height1"
-              operation="/"
-              route="div"
-              click={this.handleOperator}
-            />
-            <Operation
-              choice="Operation exp height2"
-              operation="^"
-              route="exp"
-              click={this.handleOperator}
-            />
+            {this.ops2.map(this.handleMap)}
           </div>
         </div>
       </div>

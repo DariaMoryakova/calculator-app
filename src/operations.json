@@ -1,0 +1,32 @@
+[
+  {
+    "choice": "Operation addition height1",
+    "operation": "+",
+    "route": "addition/add"
+  },
+  {
+    "choice": "Operation substruct height1",
+    "operation": "-",
+    "route": "diff"
+  },
+  {
+    "choice": "Operation multiplication height2",
+    "operation": "*",
+    "route": "mult"
+  },
+  {
+    "choice": "Operation mod height1",
+    "operation": "%",
+    "route": "modulo-proxy/mod"
+  },
+  {
+    "choice": "Operation division height1",
+    "operation": "/",
+    "route": "div"
+  },
+  {
+    "choice": "Operation addition height2",
+    "operation": "^",
+    "route": "exp"
+  }
+]
