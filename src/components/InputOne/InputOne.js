@@ -3,15 +3,12 @@ import "./InputOne.css";
 
 //First user input:
 const InputOne = props => {
-  //   constructor = props => {
-  //     super(props);
-  //   };
   return (
     <div className="form-group" id="calculator-form" method="GET">
       <label> </label>
       <input
         className="InputOne"
-        placeholder="Type first number"
+        placeholder={props.placeholder}
         onChange={props.onChange}
       />
     </div>
