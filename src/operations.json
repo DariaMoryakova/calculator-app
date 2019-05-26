@@ -17,7 +17,7 @@
   {
     "choice": "Operation mod height1",
     "operation": "%",
-    "route": "modulo-proxy/mod"
+    "route": "/mod"
   },
   {
     "choice": "Operation division height1",
