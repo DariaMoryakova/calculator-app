@@ -55,6 +55,9 @@ class Calculator extends React.Component {
         this.setState({ result: res.data });
       })
       .catch(err => {
+        if (err.code === 400) {
+          return this.setState({ result: err.message });
+        }
         console.log(err);
       });
   };
