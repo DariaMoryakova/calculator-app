@@ -6,7 +6,7 @@ const Result = (props) => {
     return (
         <div  className="resultContainer"> 
             <div className="Result">
-                <p> {props.test1} </p>
+                <p> {props.inputOne} {props.operation} {props.inputTwo} = {props.calculation}  </p>
             </div>
         </div> 
     )
