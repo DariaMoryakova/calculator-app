@@ -1,14 +1,6 @@
 # Calculator-app 
 ![UI](/src/img/ui_blank1.png)
 
-## Authors:
--- Alexander Bieber  
--- Justin De Guzman  
--- Marcus Hilaire  
--- Daria Moryakova  
--- Luis Sanchez  
--- Kevin Smith  
-
 ## Functionality:
 
 Calculator app performs the basic functions of a calculator such as addition, substraction, multiplication, division, modulo and exponentiation. 
@@ -32,6 +24,14 @@ Calculator app performs the basic functions of a calculator such as addition, su
 * [React](https://reactjs.org/) - Library used for front-end
 * [Apigee](https://cloud.google.com/apigee/) - API Proxy developer and manager
 * [Node.js](https://nodejs.org/en/) - JS runtime environment for back-end
+
+## Authors:
+- **Alexander Bieber** - Modulo operation API proxy, product testing  
+- **Justin De Guzman** - Exponentiation operation API proxy, documentation  
+- **Marcus Hilaire** - Subtraction operation API proxy, front-end API handler  
+- **Daria Moryakova** - Addition operation API proxy, front-end calculator UI  
+- **Luis Sanchez** - Multiplication operation API proxy, back-end development  
+- **Kevin Smith** - Division operation API proxy, master API proxy, product designer  
 
 ## Acknowledgements
 * We thank Gregory S Bledsoe for his knowledge, mentorship, and for giving us the opportunity to build this product.
