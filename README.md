@@ -25,6 +25,10 @@ Calculator app performs the basic functions of a calculator such as addition, su
 * [Apigee](https://cloud.google.com/apigee/) - API Proxy developer and manager
 * [Node.js](https://nodejs.org/en/) - JS runtime environment for back-end
 
+## Additional technology:
+* [Postman](https://www.getpostman.com/) - API testing environment
+* [Amazon Web Services - EC2](https://aws.amazon.com/ec2/) - Cloud computing platform
+
 ## Authors:
 - **Alexander Bieber** - Modulo operation API proxy, product testing  
 - **Justin De Guzman** - Exponentiation operation API proxy, documentation  
