@@ -29,9 +29,9 @@ Calculator app performs the basic functions of a calculator such as addition, su
 3. Click "Calculate!" to view result.
 
 ## Built with:
-* React - Library used for front-end
-* Apigee - API Proxy developer and manager
-* Node.js - JS runtime environment for back-end
+* [React](https://reactjs.org/) - Library used for front-end
+* [Apigee](https://cloud.google.com/apigee/) - API Proxy developer and manager
+* [Node.js](https://nodejs.org/en/) - JS runtime environment for back-end
 
 ## Acknowledgements
 * We thank Gregory S Bledsoe for his knowledge, mentorship, and for giving us the opportunity to build this product.
