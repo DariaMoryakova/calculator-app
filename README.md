@@ -39,5 +39,5 @@ Calculator app performs the basic functions of a calculator such as addition, su
 - **Kevin Smith** - Division operation API proxy, master API proxy, product designer  
 
 ## Acknowledgements
-* We thank Gregory S Bledsoe for his knowledge, mentorship, and for giving us the opportunity to build this product.
+* We thank Gregory S. Bledsoe for his knowledge, mentorship, and for giving us the opportunity to build this product.
 
