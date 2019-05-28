@@ -18,7 +18,8 @@ Calculator app performs the basic functions of a calculator such as addition, su
 ## How to use the app:
 1. Enter numbers into the First and Second Value fields.
 2. Select (click) on any of the six operations.
-3. Click "Calculate!" to view result.
+3. Click "Calculate!" to view result.  
+![UI](/src/img/ui_usecase.png)
 
 ## Built with:
 * [React](https://reactjs.org/) - Library used for front-end
