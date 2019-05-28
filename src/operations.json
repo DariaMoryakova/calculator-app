@@ -2,7 +2,7 @@
   {
     "choice": "Operation addition height1",
     "operation": "+",
-    "route": "addition/add"
+    "route": "add"
   },
   {
     "choice": "Operation substruct height1",
