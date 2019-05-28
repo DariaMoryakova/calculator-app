@@ -2,6 +2,7 @@
 
 ## Authors:
 -- Alexander Bieber
+
 -- Justin De Guzman
 -- Marcus Hilaire
 -- Daria Moryakova
