@@ -13,13 +13,13 @@
 Calculator app performs the basic functions of a calculator such as addition, substraction, multiplication, division, modulo and exponentiation. 
 
 ## Building and running
-1. In order to run the application, you will need to clone this repo:
+1. In order to run the application, you will need to clone this repo:  
 ```git clone https://github.com/DariaCanCode/calculator-app.git```
-2. Upon cloning, navigate to the working directory:
+2. Upon cloning, navigate to the working directory:  
 ```cd calculator-app```
-3. Install Node package manager (if not already installed):
+3. Install Node package manager (if not already installed):  
 ```npm install```
-4. Finally, type npm start to run.
+4. Finally, type npm start to run.  
 ```npm start```
 
 ## How to use the app:
