@@ -1,5 +1,5 @@
 # Calculator-app 
-![UI](/src/img/ui_blank.png)
+![UI](/src/img/ui_blank1.png)
 
 ## Authors:
 -- Alexander Bieber  
