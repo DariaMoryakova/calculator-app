@@ -1,67 +1,95 @@
-// !!IMPORTANT this file contains main functionally of the app and logic 
-import React from 'react';
-import './Calculator.css';
-import Result from '../Result/Result';
-import InputOne from '../InputOne/InputOne'; 
-import InputTwo from '../InputTwo/InputTwo'; 
-import ComputeButton from '../ComputeButton/ComputeButton';
-import Operation from '../Operation/Operation';
+// !!IMPORTANT this file contains main functionally of the app and logic
+import React from "react";
+import "./Calculator.css";
+import Result from "../Result/Result";
+import Input from "../InputOne/InputOne";
+import ComputeButton from "../ComputeButton/ComputeButton";
+import Operation from "../Operation/Operation";
+import api from "../../utils/api";
+import ops from "../../operations.json";
 
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { result: "" };
+    this.handleInputOne = this.handleInputOne.bind(this);
+    this.handleInputTwo = this.handleInputTwo.bind(this);
+    this.handleOperator = this.handleOperator.bind(this);
+  }
+  ops1 = ops.slice(0, 3);
+  ops2 = ops.slice(3);
 
-class Calculator extends React.Component  {
-    constructor(props) {
-        super(props);
-        this.state = {
-            userInput1: 'testOne',
-            userInput2:"testTwo",
-            result:"TestThree",
-            operation:"addition"
-          }
-      }
-      addition() {
-        this.setState({
-            operation: "addition"
-        })
-        console.log("addition! working!")
-        console.log(this.state.userInput1);
-      }
-      //test function:
-      handleInputOne(e) {
-        this.setState({ 
-            userInput1: e.target.value 
-        })
-      }
-    render() {
-    return(
-        <div className="calculatorContainer"> 
-            <div className="Calculator"> 
-            
-            {/* Result will display result of calculation performed by calculator: */}
-            <Result test1="test"> </Result>
+  handleMap = x => {
+    return (
+      <Operation
+        choice={x.choice}
+        operation={x.operation}
+        route={x.route}
+        click={this.handleOperator}
+        selected={this.state.operation}
+        key={x.operation}
+      />
+    );
+  };
 
-                 <div className="first"> 
-                    {/* First user input: */}
-                    <InputOne value={this.state.userInput1}  onChange={this.handleInputOne} /> 
-                    {/* Second user input: */}
-                    <InputTwo /> 
-                    {/* ComputeButton is basically submit button: */}
-                    <ComputeButton/> 
-                </div>
-        
-                <div className="operationsContainer"> 
-                    <Operation click={() => this.addition()} choice="Operation addition height1" operation="+" /> 
-                    <Operation click={() => this.substruct()} choice="Operation substruct height1" operation="-" /> 
-                    <Operation click={() => this.multiplication()} choice="Operation multiplication height2" operation="*" /> 
-                </div>
-                <div className="operationsContainer"> 
-                    <Operation  click={() => this.mod()} choice="Operation mod height1" operation="%"  /> 
-                    <Operation  click={() => this.exp()} choice="Operation division height1" operation="/"  />  
-                    <Operation  click={() => this.exp()} choice="Operation exp height2" operation="^" />  
-                </div>
+  handleOperator = x => {
+    this.setState({ operation: x });
+  };
 
-            </div>
+  handleInputOne = e => {
+    this.setState({
+      x: e.target.value
+    });
+  };
+
+  handleInputTwo = e => {
+    this.setState({
+      y: e.target.value
+    });
+  };
+
+  handleApiCall = (operator, x, y) => {
+    api
+      .callProxy(operator, x, y)
+      .then(res => {
+        this.setState({ result: res.data });
+      })
+      .catch(err => {
+        if (err.code === 400) {
+          return this.setState({ result: err.message });
+        }
+        console.log(err);
+      });
+  };
+
+  render() {
+    return (
+      <div className="calculatorContainer">
+        <div className="Calculator">
+          {/* Result will display result of calculation performed by calculator: */}
+          <Result value={this.state.result} />
+          <div className="first">
+            {/* First user input: */}
+            <Input onChange={this.handleInputOne} placeholder="First Value" />
+            {/* Second user input: */}
+            <Input onChange={this.handleInputTwo} placeholder="Second Value" />
+            {/* ComputeButton is basically submit button: */}
+            <ComputeButton
+              status={this.state}
+              handleClick={this.handleApiCall}
+            />
+          </div>
+
+          <div className="operationsContainer">
+            {this.ops1.map(this.handleMap)}
+          </div>
+          <div className="operationsContainer">
+            {this.ops2.map(this.handleMap)}
+          </div>
         </div>
-    )}
+      </div>
+    );
+  }
 }
 
-export default Calculator; 
+export default Calculator;

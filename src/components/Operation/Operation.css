@@ -1,37 +1,51 @@
 .Operation {
-    background-color:#F9EEE0; 
-    border-radius: 5px;
-    margin-top:20px;
-    margin-left:40px;
-    width:100px;
-    /* height: 120px; */
-    font-size:60px;
-    text-align: center;  
+  background-color: #f9eee0;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 100px;
+  /* height: 120px; */
+  font-size: 60px;
+  text-align: center;
+}
+.Operation :hover {
+  /* background-color: black; */
+  transform: scale(1.5);
+}
+.selected {
+  background-color: rgb(128, 128, 128);
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 40px;
+  width: 100px;
+  /* height: 120px; */
+  font-size: 60px;
+  text-align: center;
 }
 .height1 {
-    height: 120px;
+  height: 120px;
 }
 .height2 {
-    height:80px;
+  height: 80px;
 }
 .operationText {
-    margin-top:-40px;
+  margin-top: -40px;
 }
 .addition {
-    color:red; 
+  color: red;
 }
 .division {
-    color:blue;
+  color: blue;
 }
 .multiplication {
-    color:green;
+  color: green;
 }
 .substruct {
-    color:purple;
+  color: purple;
 }
 .exp {
-    color:orange;
+  color: orange;
 }
 .mod {
-    color:brown;
+  color: brown;
 }
