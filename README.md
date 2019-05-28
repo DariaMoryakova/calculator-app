@@ -1,13 +1,12 @@
 # Calculator-app 
 
 ## Authors:
--- Alexander Bieber
-
--- Justin De Guzman
--- Marcus Hilaire
--- Daria Moryakova
--- Luis Sanchez
--- Kevin Smith
+-- Alexander Bieber  
+-- Justin De Guzman  
+-- Marcus Hilaire  
+-- Daria Moryakova  
+-- Luis Sanchez  
+-- Kevin Smith  
 
 ## Functionality:
 
