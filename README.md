@@ -1,4 +1,4 @@
-# Calculator-app 
+# [Calculator-app](https://marcushilaire.github.io/calculator-app/)  
 ![UI](/src/img/ui_blank1.png)
 
 ## Functionality:
