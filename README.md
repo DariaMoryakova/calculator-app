@@ -27,7 +27,7 @@ Calculator app performs the basic functions of a calculator such as addition, su
 2. Select (click) on any of the six operations.
 3. Click "Calculate!" to view result.
 
-## Built with: React, Apigee, Node.js, Javascript
+## Built with:
 * React - Library used for front-end
 * Apigee - API Proxy developer and manager
 * Node.js - JS runtime environment for back-end
